@@ -13,3 +13,21 @@ The script will also show you its intended output before writing to the file.
 
 Invoke with:
 `./organize-includes /path/to/file`
+
+Example usage:
+```
+./organize-includes.pl example.c
+
+Before:                                  After:                                  
+#include <a>                             #include <a>                            
+#include <g>                             #include <b>                            
+#include <b>                             #include <c>                            
+#include <f>                             #include <d>                            
+#include <c>                             #include <e>                            
+#include <d>                             #include <f>                            
+#include <e>                             #include <g>                            
+
+Do you want to write and save these changes? [y/n]: y
+
+Changes written to example.c. Exiting.
+```
